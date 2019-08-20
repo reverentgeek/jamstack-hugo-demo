@@ -207,4 +207,4 @@ canonifyurls = true
   [params.okta]
     clientId = "0oamzxs3mk2kJy4hQ0h7"
     baseUrl = "https://dev-822608.oktapreview.com"
-    redirectUri = "http://localhost:1313/login/"
+    redirectUri = "https://reverent-mclean-bc454c.netlify.com/login/"
