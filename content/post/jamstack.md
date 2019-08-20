@@ -8,7 +8,7 @@ If you're a web developer, chances are you may have heard or seen the term "JAMs
 
 The "JAM" in JAMstack stands for JavaScript, APIs, and Markup. JAMstack is essentially a pattern of architecture for building web applications with the benefits of reduced costs, higher security, and increased performance and scalability.
 
-JAMstack does not dictate any particular technology. You can use any JavaScript library or any technology that compiles to JavaScript (e.g. TypeScript, Elm, Clojure, or WebAssembly). JavaScript can fetch data or send updates to third-party APIs, your own API, Serverless functions, or any combination of APIs. For managing content, you can choose from a variety of static site generators, such as Hugo, GatsbyJS, Jekyll, Next.js, or Nuxt.js, and write content using Markdown or any other markup language or system that is eventually rendered as HTML.
+JAMstack does not dictate any particular technology. You can use any JavaScript library or any technology that compiles to JavaScript (e.g. TypeScript, Elm, Clojure, or WebAssembly). JavaScript can fetch data or send updates to third-party APIs, your own API, Serverless functions, or any combination of APIs. For managing content, you can choose from a variety of static site generators, such as Hugo, GatsbyJS, Jekyll, Next.js, Nuxt.js, or VuePress, and write content using Markdown or any other markup language or system that is eventually rendered as HTML.
 
 ![JAMStack]()
 
@@ -46,8 +46,7 @@ To complete this tutorial, there are a few things you will need.
   * **Linux**: [Linuxbrew](https://docs.brew.sh/Homebrew-on-Linux)
 * [Git](https://git-scm.com/downloads)
 * If you don't already have a favorite code editor, install [Visual Studio Code](https://code.visualstudio.com/)
-* A forever free [Okta Developer Account](https://developer.okta.com/signup/)
-* A free Starter account on [Netlify](https://app.netlify.com/signup)
+* A free [Okta Developer Account](https://developer.okta.com/signup/)
 
 ### Install Hugo
 
@@ -475,12 +474,18 @@ This demonstrates we can use JavaScript with the active login session to call ad
 
 Of course, there is so much more you can do! For example, from here you could integrate additional APIs and make requests to those using the same Okta authentication token. You could create a mashup of public and secure services.
 
-## Deploy to Netlify
-
 ## Learn More About Static Sites and Security
 
-We've only scratched the surface of everything you can do with JAMstack.
+In this post we've covered the basics of the JAMstack architecture, the benefits, and how to get started. However, we've only scratched the surface of everything you can do! Here are some resources to help you explore further!
 
+* [Add Authentication and Personalization to VuePress](https://developer.okta.com/blog/2019/06/14/add-authentication-and-personalization-to-vuepress)
+* [Static Sites vs CMS](https://developer.okta.com/blog/2018/06/07/static-sites-vs-cms)
+* [Tutorial: Build Universal Applications with Nuxt.js
+](https://developer.okta.com/blog/2019/04/26/tutorial-build-universal-apps-with-nuxt)
+* [How to Configure Better Web Site Security with Cloudflare and Netlify](https://developer.okta.com/blog/2019/04/11/site-security-cloudflare-netlify)
 * [Okta Sign-In Widget](https://developer.okta.com/code/javascript/okta_sign-in_widget/)
 * [Okta Auth JavaScript SDK](https://github.com/okta/okta-auth-js)
-* [Host Hugo on Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/)
+
+For one example of deploying Hugo to a CDN, here is an excellent tutorial on how to [host Hugo on Netlify](https://gohugo.io/hosting-and-deployment/hosting-on-netlify/).
+
+You can find the complete source code for this post and demo on [GitHub](https://github.com/reverentgeek/jamstack-hugo-demo).
