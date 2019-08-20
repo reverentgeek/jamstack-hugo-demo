@@ -1,4 +1,6 @@
+// wait for the page to load
 $(document).ready(function () {
+  // create an instance of the Okta Sign-In widget
   var config = window.okta.config;
   var signIn = new OktaSignIn({
     clientId: config.clientId,
@@ -6,6 +8,7 @@ $(document).ready(function () {
     redirectUri: config.redirectUri
   });
 
+  // function to get the active login session, if exists
   function getSession() {
     return signIn.authClient.session.get()
       .then(function (session) {
@@ -29,6 +32,7 @@ $(document).ready(function () {
     $('#okta-info').show();
   }
 
+  // if there's an active login session, show the welcome message
   getSession()
     .then(function(res) {
       if (res.session.status === 'ACTIVE') {
