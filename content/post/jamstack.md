@@ -118,7 +118,7 @@ Go back to your terminal and launch the Hugo web server with the following comma
 hugo server -D
 ```
 
-By default, the local web site should be available at `http://localhost:1313`. Open your browser and navigate to the URL output at the terminal. By default, this should be `http://localhost:1313`. Switch back to your editor, make a change to the post, and save the file. Hugo should detect the change and automatically refresh the web site!
+Open your browser and navigate to the URL output at the terminal. By default, this should be `http://localhost:1313`. Switch back to your editor, make a change to the post, and save the file. Hugo should detect the change and automatically refresh the web site!
 
 ![Hello World Hugo Site](/img/hello-world-hugo-site.jpg)
 
