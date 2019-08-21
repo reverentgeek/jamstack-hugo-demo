@@ -4,31 +4,31 @@ date: 2019-08-19T13:52:11-04:00
 draft: false
 ---
 
-If you're a web developer, chances are you may have heard or seen the term "JAMstack." Curiously, JAMstack isn't a solution to prevent clogged printers, it isn't something to eat on toast, nor is it way to make music. However, by the time you finish reading this tutorial, you'll understand JAMstack, its benefits, and one approach to implementing JAMstack for yourself. _Let's get ready to JAM._
+If you're a web developer, chances are you have heard the term "JAMstack." Curiously, JAMstack isn't a solution to prevent clogged printers, something to eat on toast, or a way to make music. However, by the time you finish reading this tutorial, you'll understand JAMstack and its benefits, and have approach to implementing JAMstack for yourself. _Let's get ready to JAM._
 
-The "JAM" in JAMstack stands for JavaScript, APIs, and Markup. JAMstack is essentially a pattern of architecture for building web applications with the benefits of reduced costs, higher security, and increased performance and scalability.
+The "JAM" in JAMstack stands for JavaScript, APIs, and Markup. JAMstack’s pattern of architecture makes web applications less expensive to build and more secure, with better performance and scalability.
 
-JAMstack does not dictate any particular technology. You can use any JavaScript library or any technology that compiles to JavaScript (e.g. TypeScript, Elm, Clojure, or WebAssembly). JavaScript can fetch data or send updates to third-party APIs, your own API, Serverless functions, or any combination of APIs. For managing content, you can choose from a variety of static site generators, such as Hugo, GatsbyJS, Jekyll, Next.js, Nuxt.js, or VuePress, and write content using Markdown or any other markup language or system that is eventually rendered as HTML.
+JAMstack does not dictate you switch to any particular technology. You can use any JavaScript library or technology that compiles to JavaScript (e.g. TypeScript, Elm, Clojure, or WebAssembly). JavaScript can fetch data or send updates to third-party APIs, your own API, Serverless functions, or any combination of APIs. For managing content, you can choose from a variety of static site generators, such as Hugo, GatsbyJS, Jekyll, Next.js, Nuxt.js, or VuePress, and write content using Markdown or any other markup system that renders as HTML.
 
-![JAMStack]()
+![JAMStack](/img/secure-and-scalable-introduction-to-jamstack.png)
 
 ## JAMstack is Fast, Scalable, and Less Expensive
 
-Traditional web applications and Content Management Systems (CMS) rely on server-side code to render and return HTML on every request. Often times, these systems include a database or other type of dynamic storage, adding another layer of latency to requests. Scaling a traditional system with more servers and ensuring high availability is no trivial task. Add to this the complexity of caching, such as invalidating the cache when content or code changes, and it's a recipe for heartburn.
+Traditional web applications and Content Management Systems (CMS) rely on server-side code to render and return HTML on every request. Often times, these systems include a database or other type of dynamic storage, adding another layer of latency. Scaling a traditional system with more servers and ensuring high availability is no trivial task. Add to this the complexity of caching, such as invalidating the cache when content or code changes, and it's a recipe for heartburn.
 
-With the JAMstack approach, every page is compiled (or built) ahead of time when the application is deployed. All the HTML, JavaScript, CSS, and images required for the application are fully "baked" ahead of time. Serving static files is faster and far simpler than any time server-side code is executed. The goal is to avoid as much server executed code as possible.
+With the JAMstack approach, every page is compiled (or built) ahead of time when the application is deployed. All the HTML, JavaScript, CSS, and images required for the application are fully "baked" ahead of time.The goal is to avoid as much server executed code as possible because serving static files is faster and far simpler than executing server-side code.
 
-These static files can be globally cached across a Content Delivery Network (CDN). Most of the traffic falls on the CDN at dramatic cost savings over maintaining server infrastructure. In addition, visitors receive content from the servers that are located closest to them, which can have a big impact on responsiveness, satisfaction, and conversions!
+These static files can additionally be globally cached across a Content Delivery Network (CDN). Most of the traffic falls on the CDN at dramatic cost savings over maintaining your own server infrastructure. In addition, visitors receive content from servers that are located closest to them, which can have a big impact on responsiveness, satisfaction, and conversions!
 
-![JAMStack vs Server-Side Code]()
+![JAMStack vs Server-Side Code](/img/traditional-web-vs-jamstack.png)
 
 ## JAMstack is More Secure
 
-Traditional server-side and CMS applications most expose lots of APIs and services to allow administrators to manage data and content. All of these are at risk of attack and requires continuous effort to patch and maintain.
+Traditional server-side and CMS applications expose lots of APIs and services to allow administrators to manage data and content. All of these are at risk of attack and require continuous effort to patch and maintain.
 
 On the other hand, static files are read-only and not susceptible to the same types of attacks. There is no code to run, so no vulnerabilities to exploit!
 
-Regarding the "A" in JAMstack (APIs), the attack surface area is minimized. There's less code to secure and maintain. Also, your application may use APIs provided by a third-party. Presumably, any third-party service will diligently monitor and maintain the security and availability of their services.
+Even "A" in JAMstack (APIs) exposes a minimal attack surface area because there's less code to secure and maintain and yourapplication can use APIs provided by a third-party. Presumably, any third-party service will diligently monitor and maintain the security and availability of their services.
 
 ## Build Your First JAMstack with Hugo
 
@@ -88,7 +88,7 @@ git submodule add https://github.com/kakawait/hugo-tranquilpeak-theme.git themes
 
 Open the `jamstack-demo` project in your favorite code editor. Under the folder `/themes/hugo-tranquilpeak-theme/exampleSite`, you should see a file named `config.toml`. Open this file, select/highlight all the content, and copy the content.
 
-Next, open the site's `/config.toml` file. Delete the current configuration. Paste in the configuration from the theme's example site. Feel free to update the title or the author information.
+Next, open the site's `/config.toml` file, delete the current configuration, and paste in the configuration from the theme's example site. Feel free to update the title or the author information.
 
 #### Create a New Post
 
@@ -98,7 +98,7 @@ In your terminal, use the Hugo CLI app to create a new post.
 hugo new post/hello-world.md
 ```
 
-In your editor, you will find the new post under `/content/post/hello-world.md`. Hugo uses Markdown for managing content. At the top of the file is the "front matter" or metadata about the post. Add some content to the file below the front matter and save the file.
+In your editor, you will find the new post under `/content/post/hello-world.md`. Hugo uses Markdown for managing content. At the top of the Markdown file is the "front matter" or metadata about the post - add some content to the file below the front matter and save the file.
 
 ```md
 ---
@@ -118,13 +118,13 @@ Go back to your terminal and launch the Hugo web server with the following comma
 hugo server -D
 ```
 
-By default, the local web site should be available at `http://localhost:1313`. Open your browser and navigate to the URL that was output at the terminal. By default, this should be `http://localhost:1313`. Switch back to your editor, make a change to the post, and save the file. Hugo should detect the change and automatically refresh the web site!
+By default, the local web site should be available at `http://localhost:1313`. Open your browser and navigate to the URL output at the terminal. By default, this should be `http://localhost:1313`. Switch back to your editor, make a change to the post, and save the file. Hugo should detect the change and automatically refresh the web site!
 
 ![Hello World Hugo Site](/img/hello-world-hugo-site.jpg)
 
 ## JavaScript and APIs
 
-We now have a good foundation for the [M]arkup in JAM. Now let's talk about [J]avaScript and [A]PIs. The files may be static, but once it is delivered to the client, the experience can be as dynamic as you like. The sky is the limit!
+We now have a good foundation for the [M]arkup in JAM. Now let's talk about [J]avaScript and [A]PIs. The files may be static, but once it is delivered to the client, the experience can be as dynamic as you like. The sky's the limit!
 
 Or, perhaps the *cloud* is the limit? Heh heh... get it? *[cough]* Right, let's move on.
 
@@ -144,7 +144,7 @@ Click on the **Native** application platform. The reason for choosing **Native**
 
 ![Add native application](/img/okta-02-native-application.jpg)
 
-Change the application **Name** to whatever you desire. Update the **Login redirect URIs** to be `http://localhost:1313/login/`. Click **Done**.
+Change the application **Name** to whatever you desire. Update the **Login redirect URIs** to `http://localhost:1313/login/`. Click **Done**.
 
 ![Application settings](/img/okta-03-application-settings.jpg)
 
@@ -160,7 +160,7 @@ To enable the Hugo application to exchange information with Okta, you need to co
 
 ![API trusted origins](/img/okta-05-api-trusted-origins.jpg)
 
-Next, click **Add Origin**. Name the Origin `JAMstack Demo`. Change the **Origin URL** to `http://localhost:1313`. Click to enable both **CORS** and **Redirect**. Last, click **Save**.
+Next, click **Add Origin** and name the Origin `JAMstack Demo`. Change the **Origin URL** to `http://localhost:1313`. Click to enable both **CORS** and **Redirect**. Last, click **Save**.
 
 ![Add trusted origin](/img/okta-06-trusted-origin-settings.jpg)
 
@@ -170,7 +170,7 @@ To allow new users to create their own accounts, you'll need to enable self-serv
 
 ![Users Registration menu](/img/okta-07-users-registration.jpg)
 
-Click on the **Edit** button. Change the **Self-service registration** to **Enabled**, and then click the **Save** button at the bottom.
+Click on the **Edit** button, change the **Self-service registration** to **Enabled**, and then click the **Save** button at the bottom.
 
 ![Enable self-service registration](/img/okta-08-user-self-service-registration.jpg)
 
@@ -186,7 +186,7 @@ Now that the Okta application is set up and ready, you can add Okta registration
 
 ### Add Okta Application Settings to Hugo Configuration
 
-Open the `/config.toml` file. Find the section under the comment `# Menu Configuration`. After the **About** menu item, add the following configuration.
+Open the `/config.toml` file and find the section under the comment `# Menu Configuration`. After the **About** menu item, add the following configuration.
 
 ```toml
 [[menu.main]]
@@ -197,7 +197,7 @@ Open the `/config.toml` file. Find the section under the comment `# Menu Configu
   url = "/login"
 ```
 
-At the very end of the `config.toml` file, add a new `[params.okta]` section with the following information. Change `{yourOktaClientId}` and `{yourOktaOrgUrl}` with the values you saved earlier.
+At the very end of the `config.toml` file, add a new `[params.okta]` section with the following information. Update `{yourOktaClientId}` and `{yourOktaOrgUrl}` with the values you saved earlier.
 
 ```toml
   [params.okta]
@@ -208,7 +208,7 @@ At the very end of the `config.toml` file, add a new `[params.okta]` section wit
 
 ### Add JavaScript Files
 
-Under the `/static` folder, create a new folder named `js`. In this folder, create a new file named `okta-login.js`. Add the following JavaScript to this file. This JavaScript file will only be used with the login page itself.
+Under the `/static` folder, create a new folder named `js`. In this folder, create a new file named `okta-login.js` and add the following JavaScript to this file. This JavaScript file will only be used with the login page itself.
 
 ```js
 // using jQuery, wait for the document to finish loading
@@ -309,7 +309,7 @@ $(document).ready(function () {
 });
 ```
 
-Add to the `/static/js` folder a new file named `okta.js`. Add the following JavaScript to this file. This code will be used everywhere on the site *except* on the login page.
+Add a new file named `okta.js` to the `/static/js` folder with the following JavaScript. This code will be used everywhere on the site *except* on the login page.
 
 ```js
 // wait for the page to load
@@ -372,7 +372,7 @@ Under the `/layouts` folder, create a new folder named `partials`. Inside the `p
 </div>
 ```
 
-Under the `/layouts` folder, create a new folder named `login`. Under `/layouts/login`, add a new file named `login.html`. Add the following HTML to this file.
+Under the `/layouts` folder, create a new folder named `login`. Under `/layouts/login`, add a new file named `login.html` and add the following HTML to this file.
 
 ```html
 {{ partial "head.html" . }}
@@ -405,7 +405,7 @@ Under the `/layouts` folder, create a new folder named `login`. Under `/layouts/
 
 The next three template files will be modified copies of their respective originals. When Hugo renders a site, it first looks for template files in the site's `/layouts` folder. Any file found in the `/layouts` folder overrides the same relative named file under the theme's `layouts` folder (`/themes/hugo-tranquilpeak-theme/layouts/`).
 
-Add a new file to `/layouts/partials` named `script.html`. Open the original `script.html` file located at `/themes/hugo-tranquilpeak-theme/layouts/partials/script.html`. Copy the contents of the original file and paste into `/layouts/partials/script.html`. Then, at the very bottom of the new `script.html` file, add the following markup.
+Add a new file to `/layouts/partials` named `script.html`. Open the original `script.html` file located at `/themes/hugo-tranquilpeak-theme/layouts/partials/script.html` and copy the contents of the original file into `/layouts/partials/script.html`. Then, at the very bottom of the new `script.html` file, add the following markup.
 
 ```html
 {{ if ( isset .Site.Params "okta" ) }}
@@ -448,7 +448,7 @@ Create a new file under `/layouts/partials` named `footer.html`. Add the followi
 </footer>
 ```
 
-### Add a Content Page for the Login
+### Add a Placeholder for the Login Page
 
 Under the `/content` folder, add a file named `login.html`. Add the following markup to this file.
 
@@ -460,9 +460,9 @@ layout: login
 ---
 ```
 
-### Test the New Login
+### Test the New Login Page
 
-Now you're ready to test! Start the Hugo server if it's not still running. Browse to `http://localhost:1313`. You should see a new menu item on the left labeled `Login`. Click on this menu, and you should see the login form. Try logging in with the same Okta account you registered with, or try adding a new account using a different email address.
+Now you're ready to test! Start the Hugo server if it's not still running and browse to `http://localhost:1313`. You should see a new menu item on the left labeled `Login`. Click on this menu, and you should see the login form. Try logging in with the same Okta account you registered with, or try adding a new account using a different email address.
 
 ![Hugo Login with Okta](/img/hugo-okta-login.jpg)
 
@@ -470,7 +470,7 @@ After you login to your Okta account, you should see the welcome message on the 
 
 ![Hugo Login with personalized message](/img/hugo-okta-login-success.jpg)
 
-This demonstrates we can use JavaScript with the active login session to call additional Okta APIs. In this case, retrieving profile information that includes your first name.
+This demonstrates we can use JavaScript with the active login session to call additional Okta APIs. In this case, we're retrieving profile information that includes the user's first name.
 
 Of course, there is so much more you can do! For example, from here you could integrate additional APIs and make requests to those using the same Okta authentication token. You could create a mashup of public and secure services.
 
