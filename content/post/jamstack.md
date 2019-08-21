@@ -1,5 +1,5 @@
 ---
-title: "Scalable and Secure: An Introduction to JAMStack"
+title: "Secure and Scalable: An Introduction to JAMStack"
 date: 2019-08-19T13:52:11-04:00
 draft: false
 ---
